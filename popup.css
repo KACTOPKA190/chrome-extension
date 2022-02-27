@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    color: var(--purple);
+    text-decoration: none;
+    font-size: 70px;
+}
+
+:root{
+    --purple: #3949AB;
+    --dark: #191D23;
+}
+
+.popup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 480px;
+    height: 600px;
+    background: #191D23;
+}
+
+.popup__eye-btn{
+    margin-top: -50px;
+    width: 225px;
+    height: 225px;
+    border-radius:15px;
+    border: 5px solid var(--purple);
+    align-self: center;
+}
+
+.eye__eyelid{
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(-45deg, transparent 50%, var(--purple) 50%);
+    transition: 1.2s;
+}
+
+.popup__eye-btn:hover .eye__eyelid{
+    margin-top: -100px;
+    margin-left: -100px;
+}
+
+.eye-btn__eye{
+    margin-top: 60px;
+    margin-left: 60px;
+    width: 90px; /*90 */
+    height: 90px;
+    position: relative;
+    border-radius: 75% 15%;
+    border: 5px solid var(--purple);
+    opacity: .7;
+    transform: rotate(45deg);
+    overflow:hidden
+}
+
+.eye-btn__eye::before{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 5px solid var(--purple);
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+}
+
+.lashes{
+    width: 80%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lashe{
+    width:4px;
+    height:14px;
+    background:#3949AB;
+    border-radius:2px;
+    transition: .3s ease-in-out;
+    transition-delay: .4s;
+}
+
+.lashe:first-child{
+    transform: rotate(45deg);
+}
+
+.lashe:nth-child(2){
+    margin-top:18px;
+}
+
+.lashe:last-child{
+    transform: rotate(-45deg);
+}
+
+.popup__eye-btn:hover .lashe{
+    transition: .3s;
+    transition-delay: 0s;
+    height:0px;
+}
