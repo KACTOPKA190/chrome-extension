@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
 }
 
 a{
@@ -55,14 +56,14 @@ a{
 .eye-btn__eye{
     margin-top: 60px;
     margin-left: 60px;
-    width: 90px; /*90 */
+    width: 90px;
     height: 90px;
     position: relative;
     border-radius: 75% 15%;
     border: 5px solid var(--purple);
     opacity: .7;
     transform: rotate(45deg);
-    overflow:hidden
+    overflow: hidden;
 }
 
 .eye-btn__eye::before{
@@ -88,8 +89,8 @@ a{
 }
 
 .lashe{
-    width:4px;
-    height:14px;
+    width: 4px;
+    height: 14px;
     background:#3949AB;
     border-radius:2px;
     transition: .3s ease-in-out;
@@ -101,7 +102,7 @@ a{
 }
 
 .lashe:nth-child(2){
-    margin-top:18px;
+    margin-top: 18px;
 }
 
 .lashe:last-child{
@@ -111,5 +112,5 @@ a{
 .popup__eye-btn:hover .lashe{
     transition: .3s;
     transition-delay: 0s;
-    height:0px;
+    height: 0px;
 }

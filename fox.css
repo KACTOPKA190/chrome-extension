@@ -1,0 +1,181 @@
+@import url(popup.css);
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes timeTracker {
+
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
+
+}
+
+@keyframes firstSlide {
+
+    0% {
+      margin-left: -5px;
+    }
+    50% {
+      margin-left: 5px;
+    }
+    100% {
+      margin-left: -5px;
+    }
+
+}
+
+@keyframes twondSlide {
+    0%{
+        margin-left: 5px;
+        bottom: 55px;
+    }
+    25%{
+        bottom: 65px;
+    }
+    50%{
+        margin-left: -5px;
+        bottom: 55px;
+    }
+    75%{
+        bottom: 65px;
+    }
+    100%{
+        margin-left: 5px;
+        bottom: 55px;
+    }
+}
+
+:root{
+    --fox-orange: #ff3d00;
+    --sky: #81d4fa;
+}
+  
+  .circle {
+    position: relative;
+    z-index: 2;
+    width: 250px;
+    box-sizing: border-box;
+    height: 250px;
+    border: 7px solid var(--dark);
+    background: var(--sky);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  
+  .fox {
+    width: 140px;
+    height: 100px;
+    background: var(--fox-orange);
+    box-sizing: border-box;
+  }
+  
+  .left-ohr {
+    width: 0px;
+    height: 0px;
+    margin-top: 5px;
+    border-left: 60px solid var(--fox-orange);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+  }
+  
+  .right-ohr {
+    width: 0px;
+    height: 0px;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+  }
+
+  .fox-ear{
+      width: 0px;
+      height: 0px;
+      border-top: 50px solid transparent;
+      border-bottom: 50px solid transparent;
+  }
+
+  .fox-ear:first-child{
+    border-left: 60px solid var(--fox-orange);
+    margin-top: 7px;
+  }
+
+  .fox-ear:last-child{
+      border-right: 55px solid var(--fox-orange);
+  }
+  
+  .fox-ears {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: -50px;
+  }
+  
+  .fox-face {
+    width: 80px;
+    height: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+  }
+  
+  .fox-eyes {
+    display: flex;
+    position:absolute;
+    bottom:55px;
+    width: 80px;
+    justify-content: space-between;
+    animation: twondSlide 2s ease infinite;
+  }
+  
+  .fox-eye {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+  }
+  
+  .fox-nose {
+    margin-left: auto;
+    margin-right: auto;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid black;
+    margin-top: 15px;
+  }
+  
+  .fox-hair {
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 0px;
+    margin-top: 0px;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 50px solid white;
+  }
+  
+  .time-tracker {
+    top: 75px;
+    position: absolute;
+    margin-top: 95px;
+    left: -130px;
+    margin-left: 50%;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: conic-gradient(var(--purple) var(--rotate), transparent 1deg);
+    animation: timeTracker 5s linear infinite;
+    filter: blur(2px);
+  }
