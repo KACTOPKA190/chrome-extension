@@ -91,8 +91,8 @@ a{
 .lashe{
     width: 4px;
     height: 14px;
-    background:#3949AB;
-    border-radius:2px;
+    background: #3949AB;
+    border-radius: 2px;
     transition: .3s ease-in-out;
     transition-delay: .4s;
 }
@@ -114,3 +114,60 @@ a{
     transition-delay: 0s;
     height: 0px;
 }
+
+.cloud{
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background: white;
+    top: 30px;
+    left:100%;
+    animation: animationCloud 15s ease-in infinite;
+    transform: scale(.6);
+  }
+  
+  .cloud:before, .cloud:after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    display: inline-block;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  .cloud:before{
+    margin-top: -40px;
+    margin-left: 50px;
+    width: 75px;
+    height: 75px;
+  }
+  
+  .cloud:after{
+    margin-top: -20px;
+    margin-left: 20px;
+  }
+
+  .cloud__message{
+      color: var(--purple);
+      font-size: 22px;
+      position: absolute;
+      z-index: 2;
+      font-weight: 900;
+      padding-top: 14px;
+      text-align: center;
+      width: 150px;
+      
+  }
+
+
+
+  @keyframes animationCloud{
+      0%{
+          left: 100%;
+      }
+      100%{
+          left:-50%;    
+      }
+  }
