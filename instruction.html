@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="fox.css">
+    <style>
+        .fox-eyes{
+            transform: translate(calc(var(--x, 0) * 1px), calc(var(--y, 0) * 1px));
+        }
+
+        .fox, .fox-eyes{
+            animation: showFox .7s ease-in;
+        }
+
+
+        @keyframes showFox {
+            0%{
+                margin-bottom: -80px;
+            }
+            80%{
+                margin-bottom: 0px;
+            }
+            90%{
+                margin-bottom: -5px;
+            }
+            100%{
+                margin-bottom: 0px;
+            }
+        }
+    </style>
+  </head>
+  <body class="popup">
+      <div style="margin-top:-0px;">
+          <p class="instruction-text">You must repeat the exercise after the fox</p>
+    <div class="circle">
+    <div class="fox">
+        <div class="fox-ears">
+          <div class="fox-ear"></div>
+          <div class="fox-ear"></div>
+        </div>
+        <div class="fox-face">
+          <div class="fox-eyes">
+            <div class="fox-eye"></div>
+            <div class="fox-eye"></div>
+          </div>
+          <div class="fox-nose">
+          </div>
+        </div>
+        <div class="fox-wool"></div>
+      </div>
+    </div>
+    <p class="instruction-text">Performed without glasses,   the facial muscles are stationary. Each exercise should end with a blink that relaxes the eye muscles</p>
+    <!-- <div id="instruction-btn-border">
+        <div class="instruction-btn">></div>
+    </div> -->
+</div>
+  </body>
+  <script src="background.js"></script>
+
+</html>

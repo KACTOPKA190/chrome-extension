@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700;800;900&display=swap');
 
 
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -171,3 +177,81 @@ a{
           left:-50%;    
       }
   }
+
+  .arrow{
+    width: 20px;
+    height: 20px;
+    border-left: 4px solid var(--purple);
+    border-top: 4px solid var(--purple);
+    margin: 30px;
+  }
+
+  .arrow:first-child{
+    transform: rotate(-45deg);
+}
+
+.arrow:last-child{
+    transform: rotate(135deg);
+}
+
+.instruction-text{
+    font-size: 16px;
+    padding: 20px;
+    width:80%;
+    text-align:center;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.instruction-btn{
+    width:40px;
+    height:40px;
+    display:flex;
+    justify-content: center;
+    position:relative;
+    z-index: 5;
+    align-items:center;
+    background:var(--dark);
+    color: var(--purple);
+    border-radius:50%;
+    margin-left:100px;
+}
+
+#instruction-btn-border{
+    width:46px;
+    height:46px;
+    background: conic-gradient(var(--purple) var(--rotate), #4527a0 0deg);
+    border-radius:50%;
+    position:absolute;
+    transition:  5s ease-in-out;
+    animation-direction: reverse;
+    /* border:2px solid gray; */
+}
+.ggh{
+    animation: timeTracker 1s ease forwards reverse;
+}
+
+.ggg{
+    animation: timeUnTracker 1s ease forwards;
+}
+
+
+@keyframes timeTracker {
+
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;;
+    }
+
+}
+
+@keyframes timeUnTracker{
+    0%{
+        --rotate: 360deg;
+    }
+    100%{
+        --rotate: 0deg;
+    }
+}
